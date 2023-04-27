@@ -2251,7 +2251,9 @@
     <inspection_tool class="SpringElStaticFieldInjectionInspection" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="SpringEventListenerInspection" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="SpringFacetCodeInspection" enabled="true" level="WARNING" enabled_by_default="true" />
-    <inspection_tool class="SpringFacetInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="SpringFacetInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="checkTestFiles" value="false" />
+    </inspection_tool>
     <inspection_tool class="SpringFacetProgrammaticInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="SpringFactoryMethodInspection" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="SpringHandlersSchemasHighlighting" enabled="true" level="ERROR" enabled_by_default="true" />
