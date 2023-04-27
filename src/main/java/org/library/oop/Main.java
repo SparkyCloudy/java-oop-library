@@ -1,3 +1,9 @@
+package org.library.oop;
+
+import org.library.oop.utils.Book;
+import org.library.oop.utils.Library;
+import org.library.oop.utils.Member;
+
 import java.util.Scanner;
 
 class Main {

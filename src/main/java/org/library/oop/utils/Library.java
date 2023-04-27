@@ -1,6 +1,7 @@
+package org.library.oop.utils;
 import java.util.ArrayList;
 
-class Library {
+public class Library {
   public ArrayList<Book> books = new ArrayList<Book>();
   public ArrayList<Member> members = new ArrayList<Member>();
 

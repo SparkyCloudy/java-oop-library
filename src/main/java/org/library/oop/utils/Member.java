@@ -1,6 +1,8 @@
+package org.library.oop.utils;
+
 import java.util.ArrayList;
 
-class Member {
+public class Member {
   public String id;
   public String name;
   public ArrayList<Book> borrowedBooks = new ArrayList<Book>();
