@@ -83,7 +83,9 @@ class Main {
 
 	public static int chooseMenu() {
 		System.out.print("choose menu : ");
-		return scan.nextInt();
+		int pilihan = scan.nextInt();
+		scan.nextLine();
+		return pilihan;
 	}
 
 	// TODO 2 Ketika menambahkan member kita masih dapat membuat id yang sama,
