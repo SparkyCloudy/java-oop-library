@@ -72,9 +72,9 @@ class Main {
 	}
 
 	public static void initLibraryData() {
-		library.addBook(new Book("pemrograman java", "1"));
-		library.addBook(new Book("pemrograman oop", "2"));
-		library.addBook(new Book("pemrograman android", "3"));
+		library.addBook(new Book("pemrograman java", "1"), true);
+		library.addBook(new Book("pemrograman oop", "2"), true);
+		library.addBook(new Book("pemrograman android", "3"), true);
 
 		library.addMember(new User("aka", "1"), true);
 		library.addMember(new User("budi", "2"), true);
@@ -129,6 +129,6 @@ class Main {
 		System.out.print("book id : ");
 		String id = scan.next();
 
-		library.addBook(new Book(title, id));
+		library.addBook(new Book(title, id), true);
 	}
 }
