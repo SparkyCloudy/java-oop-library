@@ -8,28 +8,32 @@ public class Library {
   private final ArrayList<User> USERLIST = new ArrayList<>();
 
   public void addMember(User user, boolean duplicateCheck) {
-    if (duplicateCheck) {
-      try {
-        if (isUserIdExist(user.id())) {
-          throw new LibraryException();
-        }
-      } catch (LibraryException e) {
-        System.out.println("ID telah terdaftar");
-        return;
+    try {
+      if (duplicateCheck) {
+        isUserIdExist(user.id());
       }
-    }
 
-    this.USERLIST.add(user);
+      this.USERLIST.add(user);
+
+    } catch (LibraryException e) {
+      System.out.println("UserID telah terdaftar");
+    }
   }
 
-  public Boolean isUserIdExist(String id) throws LibraryException {
+  public void isUserIdExist(String id) throws LibraryException {
     for (User user : this.USERLIST) {
       if (user.id().equals(id)) {
-        return true;
+        throw new LibraryException();
       }
     }
+  }
 
-    return false;
+  public void isBookIdExist(String id) throws LibraryException {
+    for (Book book : this.BOOKLIST) {
+      if (book.id().equals(id)) {
+        throw new LibraryException();
+      }
+    }
   }
 
   public void giveBook(String bookId, String userId) {
@@ -78,8 +82,17 @@ public class Library {
   }
 
   // TODO 1 tambahkan method add book
-  public void addBook(Book book) {
-    this.BOOKLIST.add(book);
+  public void addBook(Book book, boolean duplicateCheck) {
+    try {
+      if (duplicateCheck) {
+        isBookIdExist(book.id());
+      }
+
+      this.BOOKLIST.add(book);
+
+    } catch (LibraryException e) {
+      System.out.println("BookID telah terdaftar!");
+    }
   }
 
   public Book[] getBooksList() {
@@ -107,7 +120,6 @@ public class Library {
       if (book == null) {
         continue;
       }
-
 
       System.out.printf("%s %s \n", book.id(), book.title());
     }
