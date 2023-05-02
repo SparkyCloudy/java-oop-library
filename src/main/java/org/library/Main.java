@@ -104,12 +104,12 @@ class Main {
 
 	public static void borrowBook() {
 		System.out.print("id member : ");
-		String memberId = scan.next();
+		String userId = scan.next();
 
 		System.out.print("id book : ");
 		String bookId = scan.next();
 
-		library.giveBook(memberId, bookId);
+		library.giveBook(bookId, userId);
 	}
 
 	public static void returnBook() {
@@ -119,7 +119,7 @@ class Main {
 		System.out.print("id book : ");
 		String bookId = scan.next();
 
-		library.receiveBook(userId, bookId);
+		library.receiveBook(bookId, userId);
 	}
 
 	public static void addBook() {
