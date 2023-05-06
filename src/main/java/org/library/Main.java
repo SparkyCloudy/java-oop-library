@@ -4,6 +4,7 @@ import org.library.management.User;
 import org.library.management.Book;
 import org.library.management.Library;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 class Main {
@@ -41,6 +42,7 @@ class Main {
 
 			System.out.print("continue (Y/n)? ");
 			isContinue = scan.next();
+			clearConsole();
 		}
 	}
 
@@ -130,5 +132,21 @@ class Main {
 		String id = scan.next();
 
 		library.addBook(new Book(title, id), true);
+	}
+
+	public static void clearConsole() {
+		try {
+			var osName = System.getProperty("os.name").toLowerCase();
+			if (osName.contains("linux")) {
+				new ProcessBuilder("clear").inheritIO().start().waitFor();
+			}
+
+			if (osName.contains("windows")) {
+				new ProcessBuilder("cmd", "clear", "cls").inheritIO().start().waitFor();
+			}
+
+		} catch (IOException | InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 }
