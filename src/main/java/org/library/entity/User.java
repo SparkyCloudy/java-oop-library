@@ -1,30 +1,13 @@
-package org.library.feature;
+package org.library.entity;
 
-import org.library.management.Book;
 import java.util.ArrayList;
 
-abstract class Borrowable {
+public class User extends Admin {
 
 	private final ArrayList<Book> BORROWED_BOOKS = new ArrayList<>();
 
-	/**
-	 * Add this book object to the ArrayList. Safer way then using ArrayList
-	 * object directly
-	 *
-	 * @param book {@code Object} that going to be added to the ArrayList
-	 */
-	public void receiveBook(Book book) {
-		this.BORROWED_BOOKS.add(book);
-	}
-
-	/**
-	 * Remove this book object from the ArrayList. Safer way then using
-	 * ArrayList object directly
-	 *
-	 * @param book {@code Object} that going to be added to the ArrayList
-	 */
-	public void giveBook(Book book) {
-		this.BORROWED_BOOKS.remove(book);
+	public User(String name, String id) {
+		super(name, id);
 	}
 
 	public Book[] getBorrowedBookList() {
@@ -35,5 +18,25 @@ abstract class Borrowable {
 		}
 
 		return bookArray;
+	}
+
+	/**
+	 * Add this book object to the ArrayList. Safer way than using ArrayList
+	 * object directly
+	 *
+	 * @param book {@code Object} that going to be added to the ArrayList
+	 */
+	public void receiveBook(Book book) {
+		this.BORROWED_BOOKS.add(book);
+	}
+
+	/**
+	 * Remove this book object from the ArrayList. Safer way than using
+	 * ArrayList object directly
+	 *
+	 * @param book {@code Object} that going to be added to the ArrayList
+	 */
+	public void giveBook(Book book) {
+		this.BORROWED_BOOKS.remove(book);
 	}
 }
