@@ -7,4 +7,5 @@ out_dir=target
 mvn package
 
 # Run the Main file
-gnome-terminal -- java -jar $out_dir/*.jar
+#gnome-terminal -- java -jar $out_dir/*.jar
+java -jar $out_dir/*.jar
