@@ -2,6 +2,9 @@
 
 Collection of java object-oriented programming project
 
+- Basic OOP Structure
+- Clean Architecture Concept Structure
+
 ---
 ## How to Compile?
 
