@@ -455,6 +455,7 @@
     <inspection_tool class="AngularInvalidTemplateReferenceVariable" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="AngularMissingEventHandler" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="AngularMissingOrInvalidDeclarationInModule" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="AngularMissingRequiredDirectiveInputBinding" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="AngularMultipleStructuralDirectives" enabled="true" level="ERROR" enabled_by_default="true" />
     <inspection_tool class="AngularNgOptimizedImage" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="AngularNonEmptyNgContent" enabled="true" level="ERROR" enabled_by_default="true" />
@@ -1077,7 +1078,7 @@
     <inspection_tool class="GradleKotlinxCoroutinesDeprecation" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="GradlePackageUpdate" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="GradlePackageVersionRange" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
-    <inspection_tool class="GrazieInspection" enabled="true" level="GRAMMAR_ERROR" enabled_by_default="true" />
+    <inspection_tool class="GrazieInspection" enabled="false" level="GRAMMAR_ERROR" enabled_by_default="false" />
     <inspection_tool class="GroovyAccessToStaticFieldLockedOnInstance" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="GroovyAccessibility" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="GroovyAssignabilityCheck" enabled="true" level="WARNING" enabled_by_default="true" />
@@ -1830,6 +1831,7 @@
     <inspection_tool class="OverrideDeprecatedMigration" enabled="false" level="ERROR" enabled_by_default="false" />
     <inspection_tool class="OverrideOnly" enabled="true" level="WARNING" enabled_by_default="true" />
     <inspection_tool class="OverwrittenKey" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="PSScriptAnalyzer" enabled="false" level="SERVER PROBLEM" enabled_by_default="false" />
     <inspection_tool class="PackageDirectoryMismatch" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
     <inspection_tool class="PackageDotHtmlMayBePackageInfo" enabled="false" level="WARNING" enabled_by_default="false" />
     <inspection_tool class="PackageInMultipleModules" enabled="false" level="WARNING" enabled_by_default="false" />
