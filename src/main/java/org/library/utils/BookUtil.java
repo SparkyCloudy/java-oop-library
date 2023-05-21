@@ -1,6 +1,7 @@
 package org.library.utils;
 
 import org.library.entity.Book;
+import org.library.entity.User;
 import org.library.repository.BookRepository;
 
 public class BookUtil {
@@ -15,6 +16,14 @@ public class BookUtil {
         for (Book book : bookRepository.getAll()) {
             if (book.id().equals(id)) {
                 throw new LibraryException();
+            }
+        }
+
+        for (User user: UserUtil.getUserRepository().getAll()) {
+            for (Book book : user.getBorrowedBookList()) {
+                if (book.id().equals(id)) {
+                    throw new LibraryException();
+                }
             }
         }
     }
