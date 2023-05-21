@@ -42,4 +42,8 @@ public class UserUtil {
 
         return index;
     }
+
+    protected static UserRepository getUserRepository() {
+        return userRepository;
+    }
 }
