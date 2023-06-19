@@ -2,7 +2,7 @@ package org.library.utils;
 
 import java.io.IOException;
 
-public class ConsoleUtils {
+public class ConsoleUtil {
 
     public static void clear() {
         try {
