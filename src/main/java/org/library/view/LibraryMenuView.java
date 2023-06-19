@@ -12,7 +12,7 @@ public final class LibraryMenuView {
     public LibraryMenuView(UserService userService, BookService bookService) {
         this.bookService = bookService;
         this.userService = userService;
-        choose();
+        init();
     }
 
     private void showMainMenu() {
@@ -27,7 +27,7 @@ public final class LibraryMenuView {
         System.out.println("================================");
     }
 
-    private void choose() {
+    private void init() {
         initLibraryData();
         String isContinue = "y";
 
