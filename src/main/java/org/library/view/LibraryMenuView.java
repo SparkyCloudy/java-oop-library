@@ -1,6 +1,7 @@
 package org.library.view;
 
 import org.library.service.BookService;
+import org.library.service.CredentialService;
 import org.library.service.UserService;
 import org.library.utils.*;
 
@@ -8,10 +9,16 @@ public final class LibraryMenuView {
 
     private final UserService userService;
     private final BookService bookService;
-
-    public LibraryMenuView(UserService userService, BookService bookService) {
+    
+    public LibraryMenuView(UserService userService, BookService bookService,
+                           CredentialService credentialService) {
         this.bookService = bookService;
         this.userService = userService;
+        
+        if (credentialService.getLoginStatus()) {
+            return;
+        }
+        
         init();
     }
 
