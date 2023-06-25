@@ -21,10 +21,18 @@ public class Main {
       new CredentialServiceImpl(credentialRepo);
 
   public static void main(String[] args) {
+    Main.initUtility();
+
+    new LoginMenuView(userService, credentialService);
+    
+    new LibraryMenuView(userService, bookService,
+        credentialService);
+  }
+
+  public static void initUtility() {
     BookUtil.setBookRepository(bookRepo);
     UserUtil.setUserRepository(userRepo);
-
-    var loginMenuView = new LoginMenuView(userService, credentialService);
-    var libraryMenuView = new LibraryMenuView(userService, bookService);
+    PropertiesUtil.init();
+    ConnectionUtil.init();
   }
 }
