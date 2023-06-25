@@ -1,6 +1,7 @@
 package org.library.view;
 
 import org.library.service.BookService;
+import org.library.service.CredentialService;
 import org.library.service.UserService;
 import org.library.utils.*;
 
@@ -8,11 +9,17 @@ public final class LibraryMenuView {
 
     private final UserService userService;
     private final BookService bookService;
-
-    public LibraryMenuView(UserService userService, BookService bookService) {
+    
+    public LibraryMenuView(UserService userService, BookService bookService,
+                           CredentialService credentialService) {
         this.bookService = bookService;
         this.userService = userService;
-        choose();
+        
+        if (credentialService.getLoginStatus()) {
+            return;
+        }
+        
+        init();
     }
 
     private void showMainMenu() {
@@ -27,7 +34,7 @@ public final class LibraryMenuView {
         System.out.println("================================");
     }
 
-    private void choose() {
+    private void init() {
         initLibraryData();
         String isContinue = "y";
 

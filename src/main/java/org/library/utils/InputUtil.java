@@ -10,4 +10,9 @@ public class InputUtil {
         System.out.printf("%s : ", info);
         return scanner.nextLine();
     }
+    
+    public static String loginInput(String info) {
+        System.out.printf("%-10s: ", info);
+        return scanner.nextLine();
+    }
 }
